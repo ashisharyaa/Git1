@@ -3,11 +3,14 @@
   become: yes
   gather_facts: no
   tasks:
-   -  name: i want to install apache2
+   -  name: i want to install apache2 on only ubuntu nodes
       apt:
         name: apache2
         state: present
-   -  name: i want to uninstall apache2
-      apt:
+      when: ansible_os_family=="Debian"
+
+   -  name: i want to start apache2 on only ubuntu nodes
+      service:
         name: apache2
-        state: absent
+        state: started
+      when: ansible_os_family=="Debian"
