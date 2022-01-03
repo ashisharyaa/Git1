@@ -26,3 +26,14 @@
         name: httpd
         state: started
       when: ansible_os_family=="RedHat"
+   -  name: i want to install apache2 on only ubuntu nodes
+      apt:
+        name: apache2
+        state: present
+      when: ansible_os_family=="Debian"
+
+   -  name: i want to start apache2 on only ubuntu nodes
+      service:
+        name: apache2
+        state: started
+      when: ansible_os_family=="Debian"
