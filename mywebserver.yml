@@ -5,35 +5,25 @@
   tasks:
    -  name: i want to install apache2 on only ubuntu nodes
       apt:
-        name: apache2
+        name: "{{mywebserverpackforubuntu}}"
         state: present
       when: ansible_os_family=="Debian"
 
    -  name: i want to start apache2 on only ubuntu nodes
       service:
-        name: apache2
+        name: "{{mywebserverpackforubuntu}}"
         state: started
       when: ansible_os_family=="Debian"
 
    -  name: i want to install httpd on only RedHat nodes
       yum:
-        name: httpd
+        name: "{{mywebserverpackforredhat}}"
         state: present
       when: ansible_os_family=="RedHat"
 
    -  name: i want to start httpd on only Redhat nodes
       service:
-        name: httpd
+        name: "{{mywebserverpackforredhat}}"
         state: started
       when: ansible_os_family=="RedHat"
-   -  name: i want to install apache2 on only ubuntu nodes
-      apt:
-        name: apache2
-        state: present
-      when: ansible_os_family=="Debian"
-
-   -  name: i want to start apache2 on only ubuntu nodes
-      service:
-        name: apache2
-        state: started
-      when: ansible_os_family=="Debian"
+  
