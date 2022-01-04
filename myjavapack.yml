@@ -3,14 +3,14 @@
   become: yes
   gather_facts: yes
   tasks: 
-   -  name:  I want to install java application for ubuntu
+   -  name:  I want to install java application for Ubuntu
       apt: 
-       name: "{{mywebserverpackforubuntu}}"
-       state: present 
-       when: ansible_os_family=="Debian"
+        name: "{{myjavapackageforubuntu}}"
+        state: present 
+      when: ansible_os_family=="Debian"
 
    -  name:  I want to install java application for RedHat
       yum:
-       name: "{{mywebserverpackforredhat}}"
-       state: present
-       when:  ansibile_os_family=="RedHat"
+        name: "{{myjavapackageforredhat}}"
+        state: present
+      when:  ansibile_os_family=="RedHat"

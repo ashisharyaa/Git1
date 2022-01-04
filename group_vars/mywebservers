@@ -1,4 +1,7 @@
 ---
 key: value
-mywebserverpackforubuntu: openjdk-7-jre
-mywebserverpackforredhat: java-1.7.0-openjdk
+mywebserverpackforubuntu: apache2
+mywebserverpackforredhat: httpd
+
+myjavapackageforubuntu: openjdk-7-jre
+myjavapackageforredhat: java-1.7.0-openjdk
