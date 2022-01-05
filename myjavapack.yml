@@ -12,4 +12,4 @@
       yum:
         name: "{{myjavapackageforredhat}}"
         state: present
-      when:  ansibile_os_family== "RedHat"
+      when: ansibile_os_family== "RedHat"
