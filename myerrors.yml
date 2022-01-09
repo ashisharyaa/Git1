@@ -10,7 +10,8 @@
   - name: install tree
     apt:  
       name: tree
-      statehih: present
+      statedfhgf: present
+      ignore_error: yes
     
 
 
