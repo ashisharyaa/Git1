@@ -8,7 +8,7 @@
      
 - name: i want to create file
   file:
-    path: /home/maha/rolefile
+    path: /home/ashish/rolefile
     state: touch
   notify:
   - debugvars
