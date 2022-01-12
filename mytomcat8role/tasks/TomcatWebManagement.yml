@@ -11,6 +11,6 @@
 
 
 - name: copy host context file into node side.
-  templates:
+  template:
         src: templates/hostcontext.j2
         dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
