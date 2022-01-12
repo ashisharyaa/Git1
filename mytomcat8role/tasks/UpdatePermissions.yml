@@ -18,7 +18,7 @@
   file:
    path: /opt/tomcat/conf
    state: directory
-   mode: g+e
+   mode: g+x
 
 - name: Make the tomcat user the owner of the webapps
   file:
