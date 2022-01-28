@@ -5,9 +5,9 @@
   - name: Install webserver on ubuntu
     apt:
       name: apache2
-      service: status
+      state: status
 
   - name: Start webserver
     apt: 
      name: apache2
-     service: started
+     state: started
