@@ -6,6 +6,8 @@
     apt:
       name: apache2
       service: status
+
   - name: Start webserver
-    apt: apache2
-    service: started
+    apt: 
+     name: apache2
+     service: started
