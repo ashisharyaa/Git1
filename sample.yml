@@ -14,5 +14,5 @@
 
   - name: i want to create a file
     file: 
-       path: /home/ashish/file1
+       path: /home/ubuntu/file1
        state: touch
