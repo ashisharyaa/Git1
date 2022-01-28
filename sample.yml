@@ -1,0 +1,11 @@
+--- 
+- hosts: 172.31.10.44 
+  become: yes
+  tasks:
+  - name: Install webserver on ubuntu
+    apt:
+      name: apache2
+      service: status
+  - name: Start webserver
+    apt: apache2
+    service: started
