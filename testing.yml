@@ -1,5 +1,5 @@
 --- 
-- hosts: mywebservers
+- hosts: 172.31.10.204
   tasks:
   - name: i want to install apache server
     apt:
