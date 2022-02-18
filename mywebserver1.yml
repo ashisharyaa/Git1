@@ -16,7 +16,7 @@
       when: ansible_os_family=="Debian"
 
    -  name: i want to install apache server on redhat nodes
-      apt:
+      yum:
        name: "{{mywebserverpackforredhat}}"
        state: present
        when: ansible_os_family=="RedHat"
