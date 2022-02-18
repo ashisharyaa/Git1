@@ -1,8 +1,8 @@
 --- 
-hosts: mywebservers 
-become: yes 
-gather_facts: yes 
-tasks:
+- hosts: mywebservers 
+  become: yes 
+  gather_facts: yes 
+  tasks:
 -  name: i want to install apache server on ubuntu nodes
    apt:
     name: "{{mywebserverpackforubuntu}}"
