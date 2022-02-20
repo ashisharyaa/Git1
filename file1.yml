@@ -1,0 +1,9 @@
+--- 
+- hosts: mywebservers
+  become: yes
+  gather_facts: yes
+  tasks: 
+  - name: I want to create file
+    file:
+     path: /home/ubuntu/dbfile
+     state: touch
