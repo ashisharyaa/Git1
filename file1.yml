@@ -11,7 +11,7 @@
   
   - name: I want to create file
     file:
-     path: /home/redhat/dbfile2
+     path: /usr/local/etc/dbfile2
      state: touch
     when: ansible_os_family=="RedHat"
   
