@@ -5,5 +5,13 @@
   tasks: 
   - name: I want to create file
     file:
-     path: /home/ubuntu/dbfile
+     path: /home/ubuntu/dbfile1
      state: touch
+    when: ansible_os_family=="Debian"
+  
+  - name: I want to create file
+    file:
+     path: /home/ubuntu/dbfile2
+     state: touch
+    when: ansible_os_family=="RedHat"
+  
